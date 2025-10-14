@@ -6,10 +6,10 @@ import { glob } from 'astro/loaders';
  */
 
 /**
- * Start date: must be in YYYY-MM format.
+ * Year-Month date: must be in YYYY-MM format.
  * Example: "2025-08" = Date(2025, 7, 1)
  */
-export const StartDate = z.preprocess((val) => {
+const YearMonthDate = z.preprocess((val) => {
   if (typeof val === "string" && /^\d{4}-(0[1-9]|1[0-2])$/.test(val.trim())) {
     // Convert to full date string (so z.coerce.date can parse it)
     return `${val.trim()}-01`;
@@ -21,11 +21,11 @@ export const StartDate = z.preprocess((val) => {
 ));
 
 /**
- * End date: can be YYYY-MM or "Present".
+ * Year-Month or Present date: can be YYYY-MM or "Present".
  * Example: "2025-08" = Date(2025, 7, 1)
  *           "Present" = "Present"
  */
-export const EndDate = z.preprocess((val) => {
+const YearMonthPresentDate = z.preprocess((val) => {
   if (typeof val === "string") {
     const trimmed = val.trim();
     if (trimmed.toLowerCase() === "present") return "Present";
@@ -34,6 +34,9 @@ export const EndDate = z.preprocess((val) => {
   return val;
 }, z.union([z.literal("Present"), z.coerce.date()]));
 
+export const StartDate = YearMonthDate;
+export const EndDate = YearMonthPresentDate;
+export const CreateDate = YearMonthDate;
 
 /**
  * Retrieve all Markdown files from content directory,
@@ -68,6 +71,7 @@ const projects = defineCollection({
   loader: glob({ pattern: "**/*.(md)", base: "./src/content/projects" }),
   schema:  z.object({
     project: z.string(),
+    createDate: CreateDate,
     tech: z.array(z.string()),
     links: z.array(z.object({
       text: z.string(),

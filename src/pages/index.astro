@@ -6,6 +6,7 @@ import Layout from '../layouts/Layout.astro';
 
 import ExperienceCard from '../components/experience/ExperienceCard.astro';
 import { getCollection } from 'astro:content';
+import ProjectCard from '../components/projects/ProjectCard.astro';
 
 const experiences = (await getCollection('experience')).sort(
   (a, b) => {
@@ -19,12 +20,10 @@ const experiences = (await getCollection('experience')).sort(
 	},
 );
 
----
+const projects = (await getCollection('projects')).sort(
+	(a, b) => b.data.createDate.valueOf() - a.data.createDate.valueOf()
+)
 
-
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
@@ -37,4 +36,7 @@ const experiences = (await getCollection('experience')).sort(
   {experiences.map((exp) => (
     <ExperienceCard experience={exp} />
   ))}
+  {projects.map((proj) => (
+    <ProjectCard project={proj} />
+  ))}	
 </Layout>
