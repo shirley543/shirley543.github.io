@@ -18,6 +18,4 @@ links:
     url: https://www.flexware.co.nz/
 ---
 
-## Job Description
-
 Researched and evaluated machine learning algorithms for processing accelerometer data, while improving and refactoring an existing web app for trend visualization. Worked with Python and Arduino for data collection and processing, contributing to both hardware and software workflows.

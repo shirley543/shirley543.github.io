@@ -14,6 +14,4 @@ links:
     url: [https://example.com]
 ---
 
-## Job Description
-
 [Short summary of your role and responsibilities]

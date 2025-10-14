@@ -14,6 +14,4 @@ links:
     url: https://www.auckland.ac.nz/en/cie/locations/unleash-space.html
 ---
 
-## Job Description
-
 Supported and taught visitors in using technologies including 3D printing, laser cutting, vinyl cutting, and CNC routing. Conducted workshops, inductions, and tours on VR/AR, Arduino, and Illustrator. Assisted in enabling creative projects through hands-on technology mentoring.

@@ -14,6 +14,4 @@ links:
     url: https://redfoxgamestudio.com/
 ---
 
-## Job Description
-
 Collaborated in a team of five to develop a prototype Android game, contributing to game conceptualization, user interface design, software development, and testing. Gained experience in UI prototyping and project planning.

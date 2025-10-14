@@ -22,6 +22,4 @@ links:
     url: https://vicfutureclimatetool.indraweb.io/cmip6/
 ---
 
-## Job Description
-
 Contributed to full-stack web applications for national and state-level government climate data initiatives. Worked in a team with designers, scientists, and project managers to deliver responsive, user-friendly interfaces and backend features that improve data accessibility for public users and policymakers.

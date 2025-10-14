@@ -1,8 +1,24 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-import Link from "../components/Link.astro";
-import Pill from "../components/Pill.astro";
+// import Link from "../components/Link.astro";
+// import Pill from "../components/Pill.astro";
+
+import ExperienceCard from '../components/experience/ExperienceCard.astro';
+import { getCollection } from 'astro:content';
+
+const experiences = (await getCollection('experience')).sort(
+  (a, b) => {
+		if (b.data.endDate === 'Present') {
+			return 1;
+		} else if (a.data.endDate === 'Present') {
+			return -1;
+		} else {
+			return b.data.endDate.valueOf() - a.data.endDate.valueOf()
+		}
+	},
+);
+
 ---
 
 
@@ -14,8 +30,11 @@ import Pill from "../components/Pill.astro";
 <Layout>
 	<Welcome />
 	<div style="display: flex; gap: 1rem;">
-		<Link text="View Portfolio" href="/portfolio" />
+		<!-- <Link text="View Portfolio" href="/portfolio" />
 		<Link text="GitHub" href="https://github.com" external={true} />
-		<Pill text="Testing"/>
+		<Pill text="Testing"/> -->
 	</div>
+  {experiences.map((exp) => (
+    <ExperienceCard experience={exp} />
+  ))}
 </Layout>
