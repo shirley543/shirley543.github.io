@@ -11,7 +11,7 @@ tech:
   - Figma
 links:
   - text: GitHub repository
-    url: [https://github.com/example]
+    url: https://github.com/shirley543/radioglobe
 ---
 
 ## Description
