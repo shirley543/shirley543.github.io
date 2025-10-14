@@ -12,6 +12,13 @@ const { about } = Astro.props;
 	<h1>{about.data.name}</h1>
 	<h2>{about.data.role}</h2>
 	<p>{about.body}</p>
+	<ul class="links">
+		{about.data.links.map((link) => (
+			<li>
+				<a href={link.url} target="_blank" rel="noopener noreferrer">{link.text}</a>
+			</li>
+		))}
+	</ul>
 </section>
 
 <style>

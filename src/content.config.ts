@@ -47,6 +47,11 @@ const about = defineCollection({
   schema:  z.object({
     name: z.string(),
     role: z.string(),
+    links: z.array(z.object({
+      text: z.string(),
+      icon: z.string(),
+      url: z.string(),
+    })),
   })
 });
 

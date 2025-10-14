@@ -1,6 +1,19 @@
 ---
 name: Shirley Xiao
 role: Software Engineer
+links:
+  - text: LinkedIn
+    icon: LinkedIn_Icon
+    url: https://nz.linkedin.com/in/shirley-xiao-a59a99134
+  - text: GitHub
+    icon: GitHub_Icon
+    url: https://github.com/shirley543
+  - text: Email
+    icon: Email_Icon
+    url: mailto:shirleyx38@hotmail.com
+  - text: Resume
+    icon: Document_Icon
+    url: /files/CV_ShirleyXiao.pdf
 ---
 
 I'm a software engineer and life-long learner, passionate about building impactful solutions.
