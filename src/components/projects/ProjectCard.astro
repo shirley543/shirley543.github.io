@@ -1,0 +1,102 @@
+---
+import type { CollectionEntry } from 'astro:content';
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+
+const { project } = Astro.props;
+
+---
+
+<article class="project-card">
+  <header>
+    <h3>{project.data.project}</h3>
+  </header>
+
+  {project.data.tech && (
+    <ul class="tech-stack">
+      {project.data.tech.map((tech) => (
+        <li>{tech}</li>
+      ))}
+    </ul>
+  )}
+
+  {project.data.links && (
+    <ul class="links">
+      {project.data.links.map((link) => (
+        <li>
+          <a href={link.url} target="_blank" rel="noopener noreferrer">{link.text}</a>
+        </li>
+      ))}
+    </ul>
+  )}
+
+  <div class="description">
+    {project.body}
+  </div>
+</article>
+
+<style>
+.project-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  background-color: #fff;
+
+  header {
+    h3 {
+      font-size: 1.25rem;
+      margin: 0;
+    }
+  }
+
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0;
+
+    li {
+      background-color: #e0f2fe;
+      color: #0369a1;
+      padding: 0.25rem 0.5rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+    }
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0;
+
+    li a {
+      color: #1d4ed8;
+      text-decoration: underline;
+      font-size: 0.875rem;
+    }
+  }
+
+  .description {
+    margin-top: 1rem;
+    line-height: 1.5;
+
+    h2, h3, h4 {
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 1.25rem;
+    }
+  }
+}
+</style>

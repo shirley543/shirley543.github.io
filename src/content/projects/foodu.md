@@ -1,5 +1,6 @@
 ---
 project: Foodu
+order: 2
 tech:
   - Angular
   - TypeScript
@@ -12,7 +13,5 @@ links:
   - text: GitHub repository
     url: https://github.com/shirley543/foodu
 ---
-
-## Description
 
 A full-stack restaurant logging app with Mapbox. Features custom and grouped tags, ratings, descriptions, and tag-based filtering.

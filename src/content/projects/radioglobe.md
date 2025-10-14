@@ -1,5 +1,6 @@
 ---
 project: RadioGlobe
+order: 4
 tech:
   - React
   - TypeScript
@@ -13,7 +14,5 @@ links:
   - text: GitHub repository
     url: https://github.com/shirley543/radioglobe
 ---
-
-## Description
 
 An interactive globe visualizing live radio streams via Mapbox and the Radio Browser REST API, inspired by RadioGarden and RadioCast. Includes play/pause, volume control, favorite stations, station search, genre filtering, and zoom-to-station functionality.

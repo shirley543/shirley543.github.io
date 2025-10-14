@@ -1,5 +1,6 @@
 ---
 project: Quizit
+order: 3
 tech:
   - Angular
   - TypeScript
@@ -10,7 +11,5 @@ links:
   - text: GitHub repository
     url: https://github.com/shirley543/quizit
 ---
-
-## Description
 
 A quiz game featuring category selection, configurable question count, and dynamic state management using RxJS. Built to explore Angular and reactive programming principles.

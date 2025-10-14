@@ -36,7 +36,6 @@ const YearMonthPresentDate = z.preprocess((val) => {
 
 export const StartDate = YearMonthDate;
 export const EndDate = YearMonthPresentDate;
-export const CreateDate = YearMonthDate;
 
 /**
  * Retrieve all Markdown files from content directory,
@@ -71,7 +70,7 @@ const projects = defineCollection({
   loader: glob({ pattern: "**/*.(md)", base: "./src/content/projects" }),
   schema:  z.object({
     project: z.string(),
-    createDate: CreateDate,
+    order: z.number(),
     tech: z.array(z.string()),
     links: z.array(z.object({
       text: z.string(),

@@ -21,7 +21,7 @@ const experiences = (await getCollection('experience')).sort(
 );
 
 const projects = (await getCollection('projects')).sort(
-	(a, b) => b.data.createDate.valueOf() - a.data.createDate.valueOf()
+	(a, b) => b.data.order - a.data.order
 )
 
 ---
