@@ -39,10 +39,16 @@ export const EndDate = YearMonthPresentDate;
 
 /**
  * Retrieve all Markdown files from content directory,
- * to form content collections.
- * Note: `about` is imported directly as-needed, 
- *       as not a collection
+ * to form content collections
  */
+
+const about = defineCollection({
+  loader: glob({ pattern: "**/*.(md)", base: "./src/content/about" }),
+  schema:  z.object({
+    name: z.string(),
+    role: z.string(),
+  })
+});
 
 const experience = defineCollection({
   loader: glob({ pattern: "**/*.(md)", base: "./src/content/experience" }),
@@ -73,4 +79,4 @@ const projects = defineCollection({
   })
 });
 
-export const collections = { experience, projects };
+export const collections = { about, experience, projects };
