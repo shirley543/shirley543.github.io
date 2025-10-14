@@ -6,15 +6,37 @@ interface Props {
 
 const { experience } = Astro.props;
 
+/**
+ * Format given date/ date-string to month-year format
+ * Example: "Jul. 2020"
+ * 
+ * @param date: Input date
+ * @return Formatted string
+ */
+export function formatDateToMonthYear(date: Date | string): string {
+  if (date === "Present") {
+    return date;
+  }
+
+  const d = typeof date === "string" ? new Date(date) : date;
+  const month = new Intl.DateTimeFormat("en-US", { month: "short" }).format(d);
+  const year = d.getFullYear();
+  return `${month}. ${year}`;
+}
+
 ---
 
 <article class="experience-card">
   <header>
     <h3>{experience.data.role} @ {experience.data.company}</h3>
     <p class="meta">
-      {experience.data.startDate} - {experience.data.endDate} | {experience.data.location}
+      {formatDateToMonthYear(experience.data.startDate)} - {formatDateToMonthYear(experience.data.endDate)} | {experience.data.location}
     </p>
   </header>
+
+  <div class="description">
+    {experience.body}
+  </div>
 
   {experience.data.tech && (
     <ul class="tech-stack">
@@ -34,9 +56,6 @@ const { experience } = Astro.props;
     </ul>
   )}
 
-  <div class="description">
-    {experience.body}
-  </div>
 </article>
 
 <style>
