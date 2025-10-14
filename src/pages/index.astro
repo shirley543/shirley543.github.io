@@ -8,6 +8,7 @@ import ExperienceCard from '../components/experience/ExperienceCard.astro';
 import { getCollection } from 'astro:content';
 import ProjectCard from '../components/projects/ProjectCard.astro';
 import AboutSection from '../components/about/AboutSection.astro';
+import * as about from '../content/about/about-me.md';
 
 const experiences = (await getCollection('experience')).sort(
   (a, b) => {
@@ -25,13 +26,12 @@ const projects = (await getCollection('projects')).sort(
 	(a, b) => b.data.order - a.data.order
 )
 
-const about = (await getCollection('about'));
 
 ---
 
 <Layout>
 	<Welcome />
-	<AboutSection about={about[0]}/>
+	<AboutSection about={about}/>
 	<div style="display: flex; gap: 1rem;">
 		<!-- <Link text="View Portfolio" href="/portfolio" />
 		<Link text="GitHub" href="https://github.com" external={true} />
