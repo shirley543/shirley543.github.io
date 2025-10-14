@@ -76,7 +76,10 @@ const projects = defineCollection({
   schema:  z.object({
     project: z.string(),
     order: z.number(),
-    pic: z.string(),
+    pic: z.object({
+      src: z.string(),
+      alt: z.string(),
+    }),
     tech: z.array(z.string()),
     links: z.array(z.object({
       text: z.string(),

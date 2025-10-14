@@ -1,7 +1,9 @@
 ---
 project: Quizit
 order: 3
-pic: /images/TestScreenshot.png
+pic:
+  src: /images/TestScreenshot.png
+  alt: Alt-text for TestScreenshot
 tech:
   - Angular
   - TypeScript

@@ -31,7 +31,7 @@ const { project } = Astro.props;
     </ul>
   )}
 
-  <img src={project.data.pic} />
+  <img src={project.data.pic.src} alt={project.data.pic.alt} loading="lazy" />
 
   <div class="description">
     {project.body}

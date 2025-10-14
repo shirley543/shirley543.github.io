@@ -1,7 +1,9 @@
 ---
 project: Habitsu
 order: 5
-pic: /images/TestScreenshot.png
+pic:
+  src: /images/TestScreenshot.png
+  alt: Alt-text for TestScreenshot
 tech:
   - React
   - TypeScript
