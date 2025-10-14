@@ -1,5 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { Icon } from 'astro-icon/components'
+
 interface Props {
   about: CollectionEntry<'about'>;
 }
@@ -15,7 +17,9 @@ const { about } = Astro.props;
 	<ul class="links">
 		{about.data.links.map((link) => (
 			<li>
-				<a href={link.url} target="_blank" rel="noopener noreferrer">{link.text}</a>
+				<a href={link.url} target="_blank" rel="noopener noreferrer">{link.text}
+					<Icon name={link.icon} />
+				</a>
 			</li>
 		))}
 	</ul>

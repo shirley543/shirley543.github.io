@@ -3,16 +3,16 @@ name: Shirley Xiao
 role: Software Engineer
 links:
   - text: LinkedIn
-    icon: LinkedIn_Icon
+    icon: lucide:linkedin
     url: https://nz.linkedin.com/in/shirley-xiao-a59a99134
   - text: GitHub
-    icon: GitHub_Icon
+    icon: lucide:github
     url: https://github.com/shirley543
   - text: Email
-    icon: Email_Icon
+    icon: lucide:mail
     url: mailto:shirleyx38@hotmail.com
   - text: Resume
-    icon: Document_Icon
+    icon: lucide:download
     url: /files/CV_ShirleyXiao.pdf
 ---
 
