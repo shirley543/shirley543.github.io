@@ -1,6 +1,7 @@
 ---
 project: RadioGlobe
 order: 4
+pic: /images/TestScreenshot.png
 tech:
   - React
   - TypeScript

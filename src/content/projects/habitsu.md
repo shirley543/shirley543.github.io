@@ -1,6 +1,7 @@
 ---
 project: Habitsu
 order: 5
+pic: /images/TestScreenshot.png
 tech:
   - React
   - TypeScript

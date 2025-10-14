@@ -1,6 +1,7 @@
 ---
 project: Quizit
 order: 3
+pic: /images/TestScreenshot.png
 tech:
   - Angular
   - TypeScript

@@ -1,6 +1,7 @@
 ---
 project: AniCycle
 order: 1
+pic: /images/TestScreenshot.png
 tech:
   - React
   - TypeScript

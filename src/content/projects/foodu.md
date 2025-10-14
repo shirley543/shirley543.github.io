@@ -1,6 +1,7 @@
 ---
 project: Foodu
 order: 2
+pic: /images/TestScreenshot.png
 tech:
   - Angular
   - TypeScript
