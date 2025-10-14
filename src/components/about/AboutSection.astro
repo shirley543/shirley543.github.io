@@ -1,0 +1,18 @@
+---
+import type { CollectionEntry } from 'astro:content';
+interface Props {
+  about: CollectionEntry<'about'>;
+}
+
+const { about } = Astro.props;
+
+---
+
+<section id="about">
+	<h1>{about.data.name}</h1>
+	<h2>{about.data.role}</h2>
+	<p>{about.body}</p>
+</section>
+
+<style>
+</style>

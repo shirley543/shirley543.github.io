@@ -43,7 +43,7 @@ export const EndDate = YearMonthPresentDate;
  */
 
 const about = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/about" }),
+  loader: glob({ pattern: "**/*.(md)", base: "./src/content/about" }),
   schema:  z.object({
     name: z.string(),
     role: z.string(),
