@@ -11,19 +11,59 @@ const { about } = Astro.props;
 ---
 
 <section id="about">
-	<h1>{about.data.name}</h1>
-	<h2>{about.data.role}</h2>
+	<header>
+		<h1>{about.data.name}</h1>
+		<h2>{about.data.role}</h2>
+	</header>
 	<p>{about.body}</p>
-	<ul class="links">
+	<div class="social-links" role="group" aria-label="Social links">
 		{about.data.links.map((link) => (
-			<li>
-				<a href={link.url} target="_blank" rel="noopener noreferrer">{link.text}
-					<Icon name={link.icon} />
-				</a>
-			</li>
+			// {link.text}
+			<a href={link.url} target="_blank" rel="noopener noreferrer">
+				<Icon name={link.icon} />
+			</a>
 		))}
-	</ul>
+	</div>
 </section>
 
 <style>
+	header {
+		display: flex;
+		flex-direction: column;
+		gap: 0rem;
+	}
+
+	h1, p {
+		color: var(--color-text-secondary);
+	}
+	h2 {
+		color: var(--color-text-primary);
+	}
+
+	.social-links {
+		display: flex;
+		flex-direction: row;
+		gap: 0.5rem;
+
+		a {
+			display: inline-flex;
+			padding: 0.5rem 0.5rem;
+			border-radius: 0.5rem;
+			background-color: var(--color-surface-chip);
+			color: var(--color-text-chip);
+			transition: background-color 0.2s, color 0.2s, transform 0.1s;
+
+			&:hover,
+			&:focus {
+				background-color: var(--color-purple-dark);
+				color: var(--color-white);
+				transform: translateY(-1px);
+				outline: none;
+			}
+
+			&:active {
+				transform: translateY(0);
+			}
+		}
+	}
 </style>
