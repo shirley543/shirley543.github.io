@@ -1,7 +1,5 @@
 ---
-import { Colors } from "../constants/Colors";
-
-const { text, href, color = Colors.White, external = false } = Astro.props;
+const { text, href, external = false } = Astro.props;
 ---
 
 <a 
@@ -9,7 +7,6 @@ const { text, href, color = Colors.White, external = false } = Astro.props;
   href={href} 
   target={external ? "_blank" : "_self"} 
   rel={external ? "noopener noreferrer" : undefined}
-  style={`--link-color: ${color}`}
 >
   {text}
 </a>
@@ -17,7 +14,12 @@ const { text, href, color = Colors.White, external = false } = Astro.props;
 <style>
 .link {
   text-decoration: none;
-  color: var(--link-color);
-  border-bottom: 2px solid transparent;
+  color: var(--color-text-primary);
+  font-weight: 600;
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--color-text-secondary);
+  }
 }
 </style>

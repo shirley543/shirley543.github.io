@@ -1,5 +1,8 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import Chip from '../ui/Chip.astro';
+import Link from '../ui/Link.astro';
+
 interface Props {
   experience: CollectionEntry<'experience'>;
 }
@@ -28,57 +31,67 @@ export function formatDateToMonthYear(date: Date | string): string {
 
 <article class="experience-card">
   <header>
-    <h3>{experience.data.role} @ {experience.data.company}</h3>
-    <p class="meta">
-      {formatDateToMonthYear(experience.data.startDate)} - {formatDateToMonthYear(experience.data.endDate)} | {experience.data.location}
-    </p>
+    <h3>{experience.data.role}</h3>
+    <h4>
+      {experience.data.company} | {formatDateToMonthYear(experience.data.startDate)} - {formatDateToMonthYear(experience.data.endDate)}
+    </h4>
   </header>
 
-  <div class="description">
+  <p class="description">
     {experience.body}
-  </div>
+  </p>
 
-  {experience.data.tech && (
-    <ul class="tech-stack">
-      {experience.data.tech.map((tech) => (
-        <li>{tech}</li>
-      ))}
-    </ul>
-  )}
+  <footer>
+    {experience.data.links && (
+      <ul class="links">
+        {experience.data.links.map((link) => (
+          <li>
+            <Link text={link.text} href={link.url} external={true} />
+          </li>
+        ))}
+      </ul>
+    )}
 
-  {experience.data.links && (
-    <ul class="links">
-      {experience.data.links.map((link) => (
-        <li>
-          <a href={link.url} target="_blank" rel="noopener noreferrer">{link.text}</a>
-        </li>
-      ))}
-    </ul>
-  )}
-
+    {experience.data.tech && (
+      <ul class="tech-stack">
+        {experience.data.tech.map((tech) => (
+          <li>
+            <Chip text={tech} />
+          </li>
+        ))}
+      </ul>
+    )}
+  </footer>
 </article>
 
 <style>
 .experience-card {
-  /* border: 1px solid #ddd;
-  border-radius: 8px; */
-  /* padding: 1rem; */
-  margin-bottom: 1.5rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
   overflow: hidden;
-  /* background-color: #fff; */
+  max-width: 560px;
+  min-height: 245px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 0.5rem;
 
   header {
     h3 {
       font-size: 1.25rem;
-      margin: 0;
+      font-weight: 700;
     }
 
-    .meta {
-      font-size: 0.875rem;
-      color: #666;
+    h4 {
+      font-size: 1.25rem;
+      font-weight: 300;
+      color: var(--color-text-primary);
       margin-top: 0.25rem;
     }
+  }
+
+  .description {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-text-secondary);
   }
 
   .tech-stack {
@@ -87,45 +100,14 @@ export function formatDateToMonthYear(date: Date | string): string {
     gap: 0.5rem;
     list-style: none;
     padding: 0;
-    margin: 0.75rem 0;
-
-    li {
-      background-color: #e0f2fe;
-      color: #0369a1;
-      padding: 0.25rem 0.5rem;
-      border-radius: 9999px;
-      font-size: 0.75rem;
-    }
   }
 
   .links {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 1rem;
     list-style: none;
     padding: 0;
-    margin: 0.5rem 0;
-
-    li a {
-      color: #1d4ed8;
-      text-decoration: underline;
-      font-size: 0.875rem;
-    }
-  }
-
-  .description {
-    margin-top: 1rem;
-    line-height: 1.5;
-
-    h2, h3, h4 {
-      margin-top: 1rem;
-      margin-bottom: 0.5rem;
-    }
-
-    ul {
-      list-style: disc;
-      padding-left: 1.25rem;
-    }
   }
 }
 </style>

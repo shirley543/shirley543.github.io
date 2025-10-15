@@ -21,6 +21,4 @@ links:
     url: https://play.google.com/store/apps/details?id=com.fphcare.airvo3app.hospital&hl=en_AU
 ---
 
-## Job Description
-
 Implemented user interfaces for a medical device and user training apps, collaborating with designers, marketing, quality, regulatory, and process teams throughout the full software development lifecycle, to deliver high-quality, compliant solutions.

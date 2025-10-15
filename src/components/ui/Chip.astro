@@ -1,0 +1,21 @@
+---
+const { text } = Astro.props;
+---
+
+<span class="chip">
+  {text}
+</span>
+
+<style>
+.chip {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  background-color: var(--color-surface-chip);
+  color: var(--color-text-chip);
+  white-space: nowrap;
+  cursor: default;
+}
+</style>
