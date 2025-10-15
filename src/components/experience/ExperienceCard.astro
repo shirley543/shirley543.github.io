@@ -75,13 +75,17 @@ export function formatDateToMonthYear(date: Date | string): string {
   gap: 0.5rem;
 
   header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
     h3 {
-      font-size: 1.25rem;
+      font-size: 1.125rem;
       font-weight: 700;
     }
 
     h4 {
-      font-size: 1.25rem;
+      font-size: 1.125rem;
       font-weight: 300;
       color: var(--color-text-primary);
       margin-top: 0.25rem;
