@@ -1,0 +1,18 @@
+/* Base palette */
+:root {
+  --color-purple-black: #070920;
+  --color-purple-dark: #2D1B51;
+  --color-purple-med: #2E2352;
+  --color-purple-light: #B79FFF;
+  --color-white: #FFFFFF;
+  --color-slate: #D1D2E5;
+}
+
+/* Semantic colors */
+:root {
+  --color-bg-primary: var(--color-purple-black);
+  --color-text-primary: var(--color-white);
+  --color-text-secondary: var(--color-slate);
+  --color-surface-chip: var(--color-purple-med);
+  --color-text-chip: var(--color-purple-light);
+}
