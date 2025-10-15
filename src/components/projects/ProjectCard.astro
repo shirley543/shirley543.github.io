@@ -12,48 +12,70 @@ const { project } = Astro.props;
 ---
 
 <article class="project-card">
-  <header>
-    <h3>{project.data.project}</h3>
-  </header>
+  <div class="left-container">
+    <header>
+      <h3>{project.data.project}</h3>
+    </header>
 
-  <p class="description">
-    {project.body}
-  </p>
+    <p class="description">
+      {project.body}
+    </p>
 
-  <footer>
-    {project.data.links && (
-      <ul class="links">
-        {project.data.links.map((link) => (
-          <li>
-            <Link text={link.text} href={link.url} external={true} />
-          </li>
-        ))}
-      </ul>
-    )}
+    <footer>
+      {project.data.links && (
+        <ul class="links">
+          {project.data.links.map((link) => (
+            <li>
+              <Link text={link.text} href={link.url} external={true} />
+            </li>
+          ))}
+        </ul>
+      )}
 
-    {project.data.tech && (
-      <ul class="tech-stack">
-        {project.data.tech.map((tech) => (
-          <li>
-            <Chip text={tech} />
-          </li>
-        ))}
-      </ul>
-    )}
-  </footer>
+      {project.data.tech && (
+        <ul class="tech-stack">
+          {project.data.tech.map((tech) => (
+            <li>
+              <Chip text={tech} />
+            </li>
+          ))}
+        </ul>
+      )}
+    </footer>
+  </div>
 
-  <img src={project.data.pic.src} alt={project.data.pic.alt} loading="lazy" />
+  <div class="right-container">
+    <img src={project.data.pic.src} alt={project.data.pic.alt} loading="lazy" />
+  </div>
 </article>
 
 <style>
 .project-card {
   overflow: hidden;
-  max-width: 560px;
-  min-height: 245px;
+  max-width: 600px;
+  min-height: 255px;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto;
-  gap: 0.5rem;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr;
+  gap: 1.25rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+  }
+
+  .left-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 0.5rem;
+  }
+
+  .right-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   header {
     h3 {
@@ -94,7 +116,9 @@ const { project } = Astro.props;
   img {
     width: 235px;
     height: 152px;
-    border-radius: 24px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
   }
 }
 
