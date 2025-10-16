@@ -34,7 +34,7 @@ const about = (await getCollection('about'));
 			<AboutSection about={about[0]}/>
 			<section>
 				<h2>Experience</h2>
-				<div class="cards">
+				<div class="experience-cards">
 					{experiences.map((exp) => (
 						<ExperienceCard experience={exp} />
 					))}
@@ -42,7 +42,7 @@ const about = (await getCollection('about'));
 			</section>
 			<section>
 				<h2>Projects</h2>
-				<div class="cards">
+				<div class="project-cards">
 					{projects.map((proj) => (
 						<ProjectCard project={proj} />
 					))}
@@ -78,7 +78,7 @@ const about = (await getCollection('about'));
 		flex-direction: column;
 		gap: 7rem;
 		padding: 4rem 2rem;
-		@media (max-width: 768px) {
+		@media (max-width: 480px) {
 			padding: 2rem 1rem;
 		}
 
@@ -99,11 +99,26 @@ const about = (await getCollection('about'));
 		flex-direction: column;
 		gap: 1.5rem;
 
-		.cards {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
+		.experience-cards {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto;
 			gap: 4rem;
+			@media (max-width: 768px) {
+				grid-template-columns: 1fr;
+				gap: 2rem;
+			}
+		}
+
+		.project-cards {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto;
+			gap: 4rem;
+			@media (max-width: 1200px) {
+				grid-template-columns: 1fr;
+				gap: 2rem;
+			}
 		}
 	}
 </style>
