@@ -1,5 +1,5 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import { render, type CollectionEntry } from 'astro:content';
 import { Icon } from 'astro-icon/components'
 
 interface Props {
@@ -7,7 +7,7 @@ interface Props {
 }
 
 const { about } = Astro.props;
-
+const { Content } = await render(about);
 ---
 
 <section id="about">
@@ -17,10 +17,11 @@ const { about } = Astro.props;
 	</header>
 	<div>
 		<h2>About Me</h2>
-		<p>{about.body}</p>
+		<div class="paragraphs">
+			<Content />
+		</div>
 		<div class="social-links" role="group" aria-label="Social links">
 			{about.data.links.map((link) => (
-				// {link.text}
 				<a href={link.url} target="_blank" rel="noopener noreferrer">
 					<Icon name={link.icon} />
 				</a>
@@ -53,8 +54,14 @@ const { about } = Astro.props;
 		}
 	}
 
-	p {
-		color: var(--color-text-secondary);
+	.paragraphs {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+
+		p {
+			color: var(--color-text-secondary);
+		}
 	}
 
 	.social-links {
