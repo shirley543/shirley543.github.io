@@ -26,31 +26,58 @@ const about = (await getCollection('about'));
 
 ---
 
+
 <Layout>
-	<AboutSection about={about[0]}/>
-	<section>
-		<h2>Experience</h2>
-		<div class="cards">
-			{experiences.map((exp) => (
-				<ExperienceCard experience={exp} />
-			))}
+	<div class="gradient-background"></div>
+	<div class="gradient-content">
+		<div class="body-content">
+			<AboutSection about={about[0]}/>
+			<section>
+				<h2>Experience</h2>
+				<div class="cards">
+					{experiences.map((exp) => (
+						<ExperienceCard experience={exp} />
+					))}
+				</div>
+			</section>
+			<section>
+				<h2>Projects</h2>
+				<div class="cards">
+					{projects.map((proj) => (
+						<ProjectCard project={proj} />
+					))}
+				</div>
+			</section>
 		</div>
-	</section>
-	<section>
-		<h2>Projects</h2>
-		<div class="cards">
-			{projects.map((proj) => (
-				<ProjectCard project={proj} />
-			))}
-		</div>
-	</section>
+	</div>
 </Layout>
 
 <style>
-	body {
+	.gradient-background {
+		width: 100vw;
+		height: 100vh;
+		background: linear-gradient(
+			to top right,
+			var(--color-bg-primary) 36%,
+			var(--color-bg-secondary) 100%
+		);
+	}
+
+	.gradient-content {
+		position: absolute;
+		overflow-y: auto;
+		overflow-x: hidden;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+	}
+
+	.body-content {
 		display: flex;
 		flex-direction: column;
 		gap: 7rem;
+		padding: 4rem;
 		max-width: 1350px;
 		align-self: center;
 		justify-self: center;
