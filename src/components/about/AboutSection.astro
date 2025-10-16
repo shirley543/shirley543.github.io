@@ -1,6 +1,7 @@
 ---
 import { render, type CollectionEntry } from 'astro:content';
 import { Icon } from 'astro-icon/components'
+import TitledSection from '../ui/TitledSection.astro';
 
 interface Props {
   about: CollectionEntry<'about'>;
@@ -15,19 +16,18 @@ const { Content } = await render(about);
 		<h1>{about.data.name}</h1>
 		<h2>{about.data.role}</h2>
 	</header>
-	<div>
-		<h2>About Me</h2>
+	<TitledSection title="About Me">
 		<div class="paragraphs">
 			<Content />
 		</div>
 		<div class="social-links" role="group" aria-label="Social links">
 			{about.data.links.map((link) => (
 				<a href={link.url} target="_blank" rel="noopener noreferrer">
-					<Icon name={link.icon} />
+					<Icon name={link.icon} size={20} />
 				</a>
 			))}
 		</div>
-	</div>
+	</TitledSection>
 </section>
 
 <style>

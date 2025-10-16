@@ -5,6 +5,7 @@ import Layout from '../layouts/Layout.astro';
 import AboutSection from '../components/about/AboutSection.astro';
 import ExperienceCard from '../components/experience/ExperienceCard.astro';
 import ProjectCard from '../components/projects/ProjectCard.astro';
+import TitledSection from '../components/ui/TitledSection.astro';
 
 const experiences = (await getCollection('experience')).sort(
   (a, b) => {
@@ -32,22 +33,20 @@ const about = (await getCollection('about'));
 	<div class="gradient-content">
 		<div class="body-content">
 			<AboutSection about={about[0]}/>
-			<section>
-				<h2>Experience</h2>
+			<TitledSection title="Experience">
 				<div class="experience-cards">
 					{experiences.map((exp) => (
 						<ExperienceCard experience={exp} />
 					))}
 				</div>
-			</section>
-			<section>
-				<h2>Projects</h2>
+			</TitledSection>
+			<TitledSection title="Projects">
 				<div class="project-cards">
 					{projects.map((proj) => (
 						<ProjectCard project={proj} />
 					))}
 				</div>
-			</section>
+			</TitledSection>
 		</div>
 	</div>
 </Layout>
@@ -94,31 +93,25 @@ const about = (await getCollection('about'));
 		color: var(--color-text-secondary);
 	}
 
-	section {
-		display: flex;
-		flex-direction: column;
-		gap: 1.5rem;
-
-		.experience-cards {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			grid-template-rows: auto;
-			gap: 4rem;
-			@media (max-width: 768px) {
-				grid-template-columns: 1fr;
-				gap: 2rem;
-			}
+	.experience-cards {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+		gap: 4rem;
+		@media (max-width: 768px) {
+			grid-template-columns: 1fr;
+			gap: 2rem;
 		}
+	}
 
-		.project-cards {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			grid-template-rows: auto;
-			gap: 4rem;
-			@media (max-width: 1200px) {
-				grid-template-columns: 1fr;
-				gap: 2rem;
-			}
+	.project-cards {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+		gap: 4rem;
+		@media (max-width: 1200px) {
+			grid-template-columns: 1fr;
+			gap: 2rem;
 		}
 	}
 </style>
