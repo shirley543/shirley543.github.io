@@ -134,11 +134,7 @@ const about = (await getCollection('about'));
         if (entry.isIntersecting) {
           entry.target.classList.add('in-view');
           // Stop observing after the animation plays once
-          // observer.unobserve(entry.target);
-        } else {
-          // Remove the class when it goes out of view
-          entry.target.classList.remove('in-view');
-					// TODOs: want to keep observing upon scroll up (else) or only show animation once (if)
+          observer.unobserve(entry.target);
         }
       });
     }, observerOptions);
