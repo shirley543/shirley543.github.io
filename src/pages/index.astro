@@ -6,6 +6,7 @@ import AboutSection from '../components/about/AboutSection.astro';
 import ExperienceCard from '../components/experience/ExperienceCard.astro';
 import ProjectCard from '../components/projects/ProjectCard.astro';
 import TitledSection from '../components/ui/TitledSection.astro';
+import Navbar from '../components/Navbar.astro';
 
 const experiences = (await getCollection('experience')).sort(
   (a, b) => {
@@ -31,16 +32,17 @@ const about = (await getCollection('about'));
 <Layout>
 	<div class="gradient-background"></div>
 	<div class="gradient-content">
+		<Navbar />
 		<div class="body-content">
 			<AboutSection about={about[0]}/>
-			<TitledSection title="Experience">
+			<TitledSection title="Experience" id="experience">
 				<div class="experience-cards">
 					{experiences.map((exp) => (
 						<ExperienceCard experience={exp} />
 					))}
 				</div>
 			</TitledSection>
-			<TitledSection title="Projects">
+			<TitledSection title="Projects" id="projects">
 				<div class="project-cards">
 					{projects.map((proj) => (
 						<ProjectCard project={proj} />
@@ -70,6 +72,8 @@ const about = (await getCollection('about'));
 		height: 100vh;
 		top: 0;
 		left: 0;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.body-content {

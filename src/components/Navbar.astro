@@ -1,0 +1,31 @@
+<nav class="navbar">
+  <a href="#about">About</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+</nav>
+
+<style>
+  .navbar {
+    position: sticky;
+    top: 0;
+    background: rgba(7, 9, 32, 0.8);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    
+    
+
+    a {
+      color: var(--color-text-primary);
+      transition: color 0.2s;
+      text-decoration: none;
+      font-weight: 500;
+
+      &:hover {
+        color: var(--color-text-secondary);
+      }
+    }
+  }
+</style>

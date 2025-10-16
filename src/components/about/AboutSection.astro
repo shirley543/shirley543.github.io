@@ -11,12 +11,12 @@ const { about } = Astro.props;
 const { Content } = await render(about);
 ---
 
-<section id="about">
+<section>
 	<header>
 		<h1>{about.data.name}</h1>
 		<h2>{about.data.role}</h2>
 	</header>
-	<TitledSection title="About Me">
+	<TitledSection title="About Me" id="about">
 		<div class="paragraphs">
 			<Content />
 		</div>
