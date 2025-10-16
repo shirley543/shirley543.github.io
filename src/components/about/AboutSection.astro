@@ -11,12 +11,12 @@ const { about } = Astro.props;
 const { Content } = await render(about);
 ---
 
-<section>
+<section class="about-section animate-on-scroll">
 	<header>
 		<h1>{about.data.name}</h1>
 		<h2>{about.data.role}</h2>
 	</header>
-	<TitledSection title="About Me" id="about">
+	<TitledSection title="About Me" id="about" animate={false}>
 		<div class="paragraphs">
 			<Content />
 		</div>
