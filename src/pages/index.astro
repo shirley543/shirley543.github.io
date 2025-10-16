@@ -67,7 +67,8 @@ const about = (await getCollection('about'));
 	.gradient-content {
 		position: absolute;
 		overflow-y: auto;
-		overflow-x: hidden;
+		scroll-behavior: smooth;
+		scroll-padding-top: 1rem;
 		width: 100vw;
 		height: 100vh;
 		top: 0;
