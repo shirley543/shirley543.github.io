@@ -1,0 +1,13 @@
+Favicon generated using Favicon Generator:
+------------------------------------------
+https://favicon.io/favicon-generator/
+
+Config:
+-------
+Text: S
+Background: Circle
+Font Family: Lato
+Font Variant: Black 900 Normal
+Font Size: 90
+Font Color: #B79FFF
+Background Color: #2E2352
