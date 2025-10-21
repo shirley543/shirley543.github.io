@@ -2,7 +2,7 @@
 project: RadioGlobe
 order: 4
 pic:
-  src: /images/TestScreenshot.png
+  src: /images/radioglobe_720x450_Light.png
   alt: Alt-text for TestScreenshot
 tech:
   - React

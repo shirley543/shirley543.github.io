@@ -2,7 +2,7 @@
 project: AniCycle
 order: 1
 pic:
-  src: /images/TestScreenshot.png
+  src: /images/anicycle_1280x640_1_Home.png
   alt: Alt-text for TestScreenshot
 tech:
   - React

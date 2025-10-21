@@ -2,7 +2,7 @@
 project: Quizit
 order: 3
 pic:
-  src: /images/TestScreenshot.png
+  src: /images/quizit_720x450_Review.png
   alt: Alt-text for TestScreenshot
 tech:
   - Angular
