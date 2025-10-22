@@ -2,7 +2,7 @@
 project: RadioGlobe
 order: 4
 pic:
-  src: /images/radioglobe_720x450_Light.png
+  src: /personal-site/images/radioglobe_720x450_Light.png
   alt: RadioGlobe home page showing globe with radio stations and station select controls
 tech:
   - React

@@ -7,4 +7,5 @@ import icon from 'astro-icon';
 export default defineConfig({
   integrations: [icon()],
   site: 'https://shirley543.github.io',
+  base: '/personal-site',
 });

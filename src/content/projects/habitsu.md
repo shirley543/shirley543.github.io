@@ -2,7 +2,7 @@
 project: Habitsu
 order: 5
 pic:
-  src: /images/TestScreenshot.png
+  src: /personal-site/images/TestScreenshot.png
   alt: Alt-text for TestScreenshot
 tech:
   - React
