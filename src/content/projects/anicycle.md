@@ -3,7 +3,7 @@ project: AniCycle
 order: 1
 pic:
   src: /images/anicycle_1280x640_1_Home.png
-  alt: Alt-text for TestScreenshot
+  alt: AniCycle home page showing seasonal anime
 tech:
   - React
   - TypeScript

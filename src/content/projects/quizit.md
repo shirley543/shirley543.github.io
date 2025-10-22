@@ -3,7 +3,7 @@ project: Quizit
 order: 3
 pic:
   src: /images/quizit_720x450_Review.png
-  alt: Alt-text for TestScreenshot
+  alt: Quizit review page showing questions and answers
 tech:
   - Angular
   - TypeScript

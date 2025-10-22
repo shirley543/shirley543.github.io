@@ -3,7 +3,7 @@ project: RadioGlobe
 order: 4
 pic:
   src: /images/radioglobe_720x450_Light.png
-  alt: Alt-text for TestScreenshot
+  alt: RadioGlobe home page showing globe with radio stations and station select controls
 tech:
   - React
   - TypeScript
