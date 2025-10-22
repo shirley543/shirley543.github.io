@@ -1,0 +1,76 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+---
+
+
+<Layout>
+	<div class="gradient-background"></div>
+	<div class="gradient-content">
+		<div class="body-content">
+			<h1>
+        <span class="error-code">404: </span>
+        <span class="error-message">Not found</span>
+      </h1>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.gradient-background {
+		width: 100vw;
+		height: 100vh;
+		background: linear-gradient(
+			to top right,
+			var(--color-bg-primary) 36%,
+			var(--color-bg-secondary) 100%
+		);
+	}
+
+	.gradient-content {
+		position: absolute;
+		overflow-y: auto;
+		scroll-behavior: smooth;
+		scroll-padding-top: 1rem;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.body-content {
+		display: flex;
+		flex-direction: column;
+		gap: 7rem;
+		padding: 4rem 2rem;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+		@media (max-width: 480px) {
+			padding: 2rem 1rem;
+		}
+
+		max-width: 1350px;
+		box-sizing: border-box;
+		align-self: center;
+		justify-self: center;
+	}
+
+  h1 {
+    text-align: center;
+  }
+
+  .error-code {
+    color: var(--color-text-primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .error-message {
+    color: var(--color-text-secondary);
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+</style>
