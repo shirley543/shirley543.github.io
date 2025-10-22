@@ -2,7 +2,7 @@
 project: Quizit
 order: 3
 pic:
-  src: /personal-site/images/quizit_720x450_Review.png
+  src: /images/quizit_720x450_Review.png
   alt: Quizit review page showing questions and answers
 tech:
   - Angular
