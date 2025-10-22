@@ -10,7 +10,7 @@ links:
     url: https://github.com/shirley543
   - text: Email
     icon: lucide:mail
-    url: mailto:shirleyx38@hotmail.com
+    url: mailto:shirleyx38@gmail.com
   - text: Resume
     icon: lucide:download
     url: /files/CV_ShirleyXiao.pdf
