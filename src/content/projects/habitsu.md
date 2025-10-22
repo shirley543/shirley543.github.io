@@ -2,8 +2,8 @@
 project: Habitsu
 order: 5
 pic:
-  src: /images/TestScreenshot.png
-  alt: Alt-text for TestScreenshot
+  src: /images/habitsu_720x450_1_Goals.png
+  alt: Habitsu goals page showing goal progress heatmaps
 tech:
   - React
   - TypeScript
@@ -18,4 +18,4 @@ links:
     url: https://github.com/shirley543/habitsu
 ---
 
-A full-stack habit tracker inspired by GitHub's contribution heatmap, featuring authentication, responsive UI, and database schema design. Features include private/ public goals, goal stats such as current and longest streaks, and daily notes. Built with React, Prisma, PostgreSQL, and TailwindCSS.
+A full-stack habit tracker inspired by GitHub's contribution heatmap, featuring responsive UI, authentication, and database schema design. Features include numeric versus boolean goal types, goal stats such as current and longest streaks, and daily notes

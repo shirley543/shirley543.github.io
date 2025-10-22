@@ -15,4 +15,4 @@ links:
     url: https://github.com/shirley543/anicycle
 ---
 
-An AniChart-style seasonal anime tracker with infinite scroll and multi-page navigation for current and past seasons, staff, and individual works. Features responsive design, smooth animations, and GraphQL integration.
+An AniChart-style seasonal anime tracker with multi-page navigation for current and past seasons, staff, characters, and individual works. Features responsive design, CSS animations, and GraphQL integration.
