@@ -1,36 +1,36 @@
-# Astro Starter Kit: Basics
+# Personal Site
 
-```sh
-npm create astro@latest -- --template basics
-```
+My personal site, built with **Astro** and hosted with **Github Pages**.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Overview
 
-## 🚀 Project Structure
+Personal site with sections on:
+- About Me
+- Experiences
+- Projects
 
-Inside of your Astro project, you'll see the following folders and files:
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+## Tech Stack
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+| Category      | Technology |
+|---------------|------------|
+| Framework     | [Astro](https://astro.build) |
+| Language      | [TypeScript](https://www.typescriptlang.org) |
+| Styling       | [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) |
+| Content       | [Markdown (GFM)](https://github.github.com/gfm/) |
+| Hosting       | [Github Pages](https://docs.github.com/en/pages) |
+| Design / Prototyping | [Figma](https://figma.com) |
 
-## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
+## Screenshots
+
+| About | Experiences | Projects |
+|-------|-------------|----------|
+| <img src="docs/screenshots/personalSite_1280x640_1_About.png" width="640"> | <img src="docs/screenshots/personalSite_1280x640_2_Experiences.png" width="640"> | <img src="docs/screenshots/personalSite_1280x640_3_Projects.png" width="640"> |
+
+## Getting Started
+
+Commands for setting up and running the site are as follows:
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
@@ -41,6 +41,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Contributors
+Shirley Xiao - [Github](https://github.com/shirley543) - [LinkedIn](https://www.linkedin.com/in/shirley-xiao-a59a99134)
