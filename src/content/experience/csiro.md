@@ -13,8 +13,12 @@ tech:
   - TypeORM
   - Express
   - Python
+  - FastAPI
   - Jest
+  - Supertest
+  - Playwright
   - Git
+  - GitHub Actions
 links:
   - text: ACS Hazards Portal
     url: https://acs.indraweb.io/

@@ -14,6 +14,7 @@ tech:
   - Jest
   - Firebase
   - Git
+  - GitLab CI/CD
 links:
   - text: Airvo 3 Device
     url: https://www.fphcare.com/au/hospital/adult-respiratory/optiflow/airvo-3/
