@@ -4,7 +4,7 @@ role: Software Engineer
 links:
   - text: LinkedIn
     icon: lucide:linkedin
-    url: https://nz.linkedin.com/in/shirley-xiao-a59a99134
+    url: https://www.linkedin.com/in/shirley543
   - text: GitHub
     icon: lucide:github
     url: https://github.com/shirley543
