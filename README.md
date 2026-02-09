@@ -43,4 +43,4 @@ Commands for setting up and running the site are as follows:
 
 
 ## Contributors
-Shirley Xiao - [Github](https://github.com/shirley543) - [LinkedIn](https://www.linkedin.com/in/shirley-xiao-a59a99134)
+Shirley Xiao - [Github](https://github.com/shirley543) - [LinkedIn](https://www.linkedin.com/in/shirley543)
